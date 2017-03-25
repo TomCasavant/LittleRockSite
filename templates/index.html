@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/stylesheet.css') }}">
+	<title>Little Rock Nine</title>
+</head>
+<body background="/static/background.jpg">
+	<div>
+		{% for x, y in names %}
+			<a href={{x}}>
+				<figure>
+						<img src="/static/{{y}}.jpg" height="220" width="auto">
+						<figcaption>{{ x }}</figcaption>
+				</figure>
+			</a>
+		{% endfor %}
+	</div>
+</body>
+</html>
